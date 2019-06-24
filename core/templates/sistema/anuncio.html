@@ -1,0 +1,69 @@
+{% extends "sistema/home-sistema.html" %}
+{% block content %}
+
+<section class="content-header">
+    <h1>
+        Gestão de Anuncios
+        
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="{% url 'home-sistema' %}">Home</a></li>
+        <li class="active"><a href="{% url 'anuncio_site' %}">Anuncio</a></li>
+        
+    </ol>
+</section><br><br>
+
+
+
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example1" class="table table-bordered table-striped text-center">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                     <th>Tipo de Servico</th>
+                    <th>Finalidade</th>
+                    <th>Endereço</th>
+                    <th>Bairro</th>
+                    <th>Cep</th>
+                    <th>Metro</th>
+                    <th>Valor aluguel</th>
+                    <th>Valor Venda</th>
+                    <th>Qtd Comodo</th>  
+                    
+                   
+                </tr>
+            </thead>
+            <tbody>
+                {% for anuncio in anuncios %}
+                    <tr>
+                        
+                <td>{{ anuncio.nome }}</td> 
+                <td>{{ anuncio.telefone}}</td>
+                <td>{{ anuncio.tipo_servico}}</td>
+                <td>{{ anuncio.finalidade}}</td>
+                <td>{{ anuncio.endereco}}</td>
+                <td>{{ anuncio.bairro}}</td>
+                <td>{{ anuncio.cidade}}</td>
+                <td>{{ anuncio.cep}}</td>
+                <td>{{ anuncio.valor_aluguel}}</td>
+                <td>{{ anuncio.valor_venda}}</td>
+                <td>{{ anuncio.qtd_comodo}}</td>
+              
+                
+                {% endfor %}    
+                       
+                        <td>
+      
+                        </td>
+                    </tr>
+  
+            </tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+
+
+{% endblock content %}

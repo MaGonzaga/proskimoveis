@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sistema de Gestão Imobiliaria</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <!-- Bootstrap 3.3.7 -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'css/AdminLTE.min.css' %}">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+            folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="{% static 'css/skins/_all-skins.min.css' %}">
+        <!-- jvectormap -->
+        <link rel="stylesheet" href="{% static 'css/jquery-jvectormap.css' %}">
+        <!-- Google Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    </head>
+
+    {% block conteudo-sistema %}
+    {% endblock conteudo-sistema %}
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 0.0.1
+        </div>
+        <strong>Copyright &copy; 2019 <a href="#">Projeto OPE</a>.</strong> Todos os direitos reservados.
+    </footer>
+
+    <!-- jQuery 3 -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'js/adminlte.min.js' %}"></script>
+    <!-- App -->
+    <script src="{% static 'js/sistema.js' %}"></script>
+    <!-- Imovel CRUD -->
+    <script src="{% static 'js/imovel.js' %}"></script>
+    <!-- Cliente CRUD -->
+    <script src="{% static 'js/cliente.js' %}"></script>
+    <!-- Corretor CRUD -->
+    <script src="{% static 'js/corretor.js' %}"></script>
+    <!-- Proprietario CRUD -->
+    <script src="{% static 'js/proprietario.js' %}"></script>
+    <!-- Validador CPF -->
+    <script src="{% static 'js/cpf_validator.js' %}"></script>
+    <!-- MAPA -->
+    <script src="{% static 'js/mapa.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_h5CFB-pCxjBUwKXymQAsrf3dtNRgzAQ&callback=initMap" async defer></script>
+</html>

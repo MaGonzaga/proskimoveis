@@ -1,0 +1,49 @@
+{% extends "sistema/home-sistema.html" %}
+{% block content %}
+
+<section class="content-header">
+    <h1>
+        Gestão de Contatos
+        <small>Cadastro</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Cadastro</a></li>
+        <li class="active">Corretor</li>
+    </ol>
+</section><br><br>
+
+
+
+    <!-- /.box-header -->
+    <div class="box-body">
+        <table id="example1" class="table table-bordered table-striped text-center">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Mensagem</th>
+                    <th>Ação</td>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    {% for duvida in duvidas %}
+                        <td>{{ duvida.nome }}</td> 
+                        <td>{{ duvida.email }}</td>
+                        <td>{{ duvida.telefone}}</td>
+                        <td>{{ duvida.mensagem}}</td>
+                        <td><a href="{% url 'mostrar_delete'  duvida.id %}">Apagar</a></td>
+                    {% endfor %}          
+                </tr>
+  
+            </tbody>
+        </table>
+    </div>
+    <!-- /.box-body -->
+</div>
+
+
+{% endblock content %}
